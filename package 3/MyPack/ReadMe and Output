@@ -1,0 +1,84 @@
+Directory tree
+
+.
+├── Demo.class
+├── Demo.java
+├── p1
+│   ├── Demo1.class
+│   ├── Demo1.java
+│   ├── Derived.class
+│   ├── Derived.java
+│   ├── Protection.class
+│   ├── Protection.java
+│   ├── SamePackage.class
+│   └── SamePackage.java
+├── p2
+│   ├── Demo2.class
+│   ├── Demo2.java
+│   ├── OtherPackage.class
+│   ├── OtherPackage.java
+│   ├── Protection2.class
+│   └── Protection2.java
+└── ReadMe and Output
+
+
+--------------------------------------------------------
+
+To run Demo1,
+in the main directory containing p1 and p2, run
+	javac p1/*java
+	java p1/Demo1
+Output:
+
+Base Constructor
+n = 1
+n_pri = 2
+n_pro = 3
+n_pub = 4
+Base Constructor
+n = 1
+n_pri = 2
+n_pro = 3
+n_pub = 4
+Derived Constructor
+n = 1
+n_pro = 3
+n_pub = 4
+Base Constructor
+n = 1
+n_pri = 2
+n_pro = 3
+n_pub = 4
+Same Package Constructor
+n = 1
+n_pro = 3
+n_pub = 4
+
+-----------------------------------------------------
+
+To run Demo2,
+in the main directory containing p1 and p2, run
+	javac p2/*java
+	java p2/Demo2
+Output:
+
+Base Constructor
+n = 1
+n_pri = 2
+n_pro = 3
+n_pub = 4
+Derived Other Package Constructor
+n_pro = 3
+n_pub = 4
+Base Constructor
+n = 1
+n_pri = 2
+n_pro = 3
+n_pub = 4
+Other Package Constructor
+n_pub = 4
+
+-----------------------------------------------------
+
+Run Demo normally
+
